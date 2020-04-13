@@ -1,2 +1,10 @@
 server:
   port: 9620
+lumber:
+  filename: './logs/system.log'
+  maxsize: 10
+  maxbackups: 5
+  maxage: 30
+  compress: false
+debugging:
+  logger: false

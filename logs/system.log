@@ -1,0 +1,8 @@
+{"level":"INFO","ts":"2020-04-13T13:13:13.654+0700","caller":"logger/logger.go:106","msg":"[Server is starting...]"}
+{"level":"INFO","ts":"2020-04-13T13:13:24.005+0700","caller":"logger/logger.go:106","msg":"[Server is shutting down...]"}
+{"level":"INFO","ts":"2020-04-13T13:13:24.006+0700","caller":"logger/logger.go:106","msg":"[Server Shutdown Properly]"}
+{"level":"INFO","ts":"2020-04-13T13:14:14.255+0700","caller":"logger/logger.go:106","msg":"[Server is starting...]"}
+{"level":"INFO","ts":"2020-04-13T13:14:27.968+0700","caller":"logger/logger.go:106","msg":"[Server is starting...]"}
+{"level":"FATAL","ts":"2020-04-13T13:14:27.968+0700","caller":"logger/logger.go:168","msg":"Server ListenAndServe Error: [listen tcp :9620: bind: address already in use]"}
+{"level":"INFO","ts":"2020-04-13T13:42:28.521+0700","caller":"logger/logger.go:106","msg":"[Server is shutting down...]"}
+{"level":"INFO","ts":"2020-04-13T13:42:28.522+0700","caller":"logger/logger.go:106","msg":"[Server Shutdown Properly]"}

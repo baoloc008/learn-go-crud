@@ -11,7 +11,7 @@ import (
 // Initialize viper for reading configurations
 func InitConfig(svcName, cfgFile, cfgPath string) fx.Option {
 	return fx.Invoke(func() {
-		fmt.Printf("[ConfigFx] Load config %s\n", svcName)
+		log.Printf("[ConfigFx] Load config %s\n", svcName)
 		loadConfig(svcName, cfgFile, cfgPath)
 	})
 }
