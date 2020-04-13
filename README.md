@@ -1,10 +1,10 @@
 # Go CRUD
 
 ## Todos
-- [ ] project structure
-- [ ] init server with `fx`, `gin`
-- [ ] read config from file with `viper`
-- [ ] integrate `zap` logger
+- [x] project structure
+- [x] init server with `fx`, `gin`
+- [x] read config from file with `viper`
+- [x] integrate `zap` logger
 - [ ] implement crud User
 - [ ] integrate database
 - [ ] add trace id wrapper
