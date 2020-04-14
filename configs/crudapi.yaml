@@ -8,3 +8,6 @@ lumber:
   compress: false
 debugging:
   logger: false
+database:
+  dialect: sqlite3
+  url: crud_app

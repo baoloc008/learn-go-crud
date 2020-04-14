@@ -214,6 +214,7 @@ func Fatalw(msg string, keysAndValues ...interface{}) {
 	appLogger.Fatalw(msg, keysAndValues)
 }
 
+// TODO: call before stop
 // Sync flushes any buffered log entries.
 func Sync() error {
 	return appLogger.Sync()
