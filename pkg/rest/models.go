@@ -18,3 +18,8 @@ type UpdateUserRequestData struct {
 	Email       string `json:"email" binding:"required"`
 	UserName    string `json:"username" binding:"required"`
 }
+
+type CreateCommentRequestData struct {
+	UserName string `json:"username" binding:"required"`
+	Message string `json:"message" binding:"required"`
+}

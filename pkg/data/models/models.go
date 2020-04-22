@@ -20,3 +20,8 @@ type User struct {
 	Email       string `json:"email"`
 	UserName    string `json:"username"`
 }
+
+type Comment struct {
+	BaseModel
+	Content string `json:"content"`
+}
