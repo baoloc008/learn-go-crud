@@ -20,10 +20,14 @@ type DataCreator interface {
 
 type BindType uint
 
+// CRUD
+
 const (
 	BindTypeInvalid BindType = iota
 	BindTypeCreate
+	BindTypeRead
 	BindTypeUpdate
+	BindTypeDelete
 )
 
 // DataBinder declares interface for binding rest data

@@ -7,7 +7,7 @@ type repository struct {
 	creator DataCreator
 }
 
-// NewUserRepo initializes new instance of UserRepo
+// NewRepository initializes new instance of repository
 func NewRepository(db *gorm.DB, creator DataCreator) *repository {
 	return &repository{db: db, creator: creator}
 }

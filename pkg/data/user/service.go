@@ -3,24 +3,45 @@ package user
 import (
 	"github.com/gin-gonic/gin"
 	"learn-go-crud/pkg/crud"
+	"learn-go-crud/pkg/rest"
+	"net/http"
 )
 
-// IRouter defines all router handle interface includes single and group router.
-func RegisterService(r gin.IRouter, repo crud.Repository) {
-	s := crud.NewService(repo, newBinder())
-	r.GET("/users", func(c *gin.Context) {
-		s.All(c, "")
+type Service struct {
+	repo   crud.Repository
+	binder crud.DataBinder
+}
+
+func NewService(r crud.Repository, b crud.DataBinder) *Service {
+	return &Service{repo: r, binder: b}
+}
+
+func (s Service) All(c *gin.Context, tid string) {
+	c.JSON(http.StatusOK, rest.ResponseData{
+		Message: "Get All User",
 	})
-	r.POST("/user", func(c *gin.Context) {
-		s.Create(c, "")
+}
+
+func (s Service) Create(c *gin.Context, tid string) {
+	c.JSON(http.StatusOK, rest.ResponseData{
+		Message: "Create User",
 	})
-	r.GET("/user/:id", func(c *gin.Context) {
-		s.Get(c, "")
+}
+
+func (s Service) Get(c *gin.Context, tid string) {
+	c.JSON(http.StatusOK, rest.ResponseData{
+		Message: "Get User",
 	})
-	r.DELETE("/user/:id", func(c *gin.Context) {
-		s.Remove(c, "")
+}
+
+func (s Service) Remove(c *gin.Context, tid string) {
+	c.JSON(http.StatusOK, rest.ResponseData{
+		Message: "Remove User",
 	})
-	r.PUT("/user/:id", func(c *gin.Context) {
-		s.Update(c, "")
+}
+
+func (s Service) Update(c *gin.Context, tid string) {
+	c.JSON(http.StatusOK, rest.ResponseData{
+		Message: "Update User",
 	})
 }
