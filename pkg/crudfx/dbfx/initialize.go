@@ -2,13 +2,11 @@ package dbfx
 
 import (
 	"context"
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
 	"github.com/spf13/viper"
 	"go.uber.org/fx"
 	"learn-go-crud/pkg/logger"
-
-	// import sqlite dialects
-	_ "github.com/jinzhu/gorm/dialects/sqlite"
 )
 
 func initDatabase(lifecycle fx.Lifecycle) (*gorm.DB, error) {

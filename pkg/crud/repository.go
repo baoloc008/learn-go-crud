@@ -27,5 +27,10 @@ func (r repository) Update(data interface{}) error {
 	return nil
 }
 func (r repository) All() (interface{}, error) {
-	return nil, nil
+	data := r.creator.Slice()
+	db := r.db.Find(data)
+	if db.Error != nil {
+		return nil, db.Error
+	}
+	return data, nil
 }

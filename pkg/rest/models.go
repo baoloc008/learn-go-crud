@@ -21,5 +21,5 @@ type UpdateUserRequestData struct {
 
 type CreateCommentRequestData struct {
 	UserName string `json:"username" binding:"required"`
-	Message string `json:"message" binding:"required"`
+	Message  string `json:"message" binding:"required"`
 }

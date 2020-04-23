@@ -36,12 +36,12 @@ func (b binder) bindCreate(c *gin.Context) (*models.Comment, error) {
 	}
 
 	return &models.Comment{
-		Content:   fmt.Sprintf("%s: %s", data.UserName, data.Message),
+		Content: fmt.Sprintf("%s: %s", data.UserName, data.Message),
 	}, nil
 }
 
 func (b binder) bindGet(c *gin.Context) (*models.Comment, error) {
 	return &models.Comment{
-		BaseModel:   models.BaseModel{ID: 1},
+		BaseModel: models.BaseModel{ID: 1},
 	}, nil
 }

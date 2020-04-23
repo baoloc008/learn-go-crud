@@ -9,5 +9,5 @@ lumber:
 debugging:
   logger: false
 database:
-  dialect: sqlite3
-  url: crud_app
+  dialect: mysql
+  url: root:123@/databasetest?charset=utf8&parseTime=True&loc=Local

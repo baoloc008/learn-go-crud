@@ -3,6 +3,7 @@ package user
 import (
 	"github.com/gin-gonic/gin"
 	"learn-go-crud/pkg/crud"
+	"learn-go-crud/pkg/logger"
 	"learn-go-crud/pkg/rest"
 	"net/http"
 )
@@ -17,8 +18,19 @@ func NewService(r crud.Repository, b crud.DataBinder) *Service {
 }
 
 func (s Service) All(c *gin.Context, tid string) {
+	data, err := s.repo.All()
+	if err != nil {
+		logger.Errorw("Error while get all roles", "error", err)
+		c.JSON(http.StatusOK, rest.ResponseData{
+			Code:    rest.CannotGetErrorCode,
+			Message: "Get All User Error:" + err.Error(),
+		})
+		return
+	}
 	c.JSON(http.StatusOK, rest.ResponseData{
+		Code:    rest.SuccessCode,
 		Message: "Get All User",
+		Data:    data,
 	})
 }
 
